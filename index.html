@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <link rel="stylesheet" href="input.css"> -->
+  <link rel="stylesheet" href="output.css">
+  <script src="./main.js" defer></script> 
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap');
+  </style>    
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body id="body" class=" xs:px-12 xs:py-4 p-4 bg-AlmostWhite subpixel-antialiased font-epilogue font-[400] text-AlmostBlack select-none">
+  <div id="slideInMenuBG" class="hidden fixed top-0 left-0 w-screen h-screen bg-black/50"></div>
+  <div class="w-full h-8 flex justify-between items-center"> 
+    <img class="mt-2 xs:hidden" src="./images/logo.svg" />
+    <img id="ham-icon" class=" xs:hidden" src="./images/icon-menu.svg" />
+
+    <nav id="navbar" class="transition-all flex flex-col fixed top-0 -right-full h-full bg-AlmostWhite w-3/5 xs:fixed xs:top-0 xs:left-0 xs:h-16 xs:px-6 xs:w-full xs:flex-row xs:justify-between xs:items-center">
+      <img class="mt-2 hidden xs:inline" src="./images/logo.svg" />
+
+      <div class="absolute right-0 p-6 xs:hidden"><img id="x-icon" src="./images/icon-close-menu.svg" /></div>
+
+      <ul class="mt-16 flex flex-col gap-8 px-8 items-start xs:flex-row xs:mt-0 xs:w-full lg:pl-28 lg:gap-24">
+        <li id="featureMenu" class=" xs:relative text-MediumGray text-2xl cursor-pointer w-full xs:w-fit xs:text-right hover:text-AlmostBlack  xs:text-base">Features <img class="arrowDown inline" src="./images/icon-arrow-down.svg" /> <img class="arrowUp inline hidden" src="./images/icon-arrow-up.svg" />
+            <ul id="featureDropList" class="hidden h-40 top-full overflow-clip shadow xs:absolute  xs:right-0 mt-4 w-full md:w-40 rounded-xl bg-white  flex flex-col justify-evenly">
+              <li class="flex items-center pl-4 text-base text-MediumGray font-normal" ><div class="flex justify-center items-center w-10 h-4 " ><img class="" src="./images/icon-todo.svg"      /></div>  Todo List</li>
+              <li class="flex items-center pl-4 text-base text-MediumGray font-normal" ><div class="flex justify-center items-center w-10 h-4 " ><img class="" src="./images/icon-calendar.svg"  /></div>  Calendar</li>
+              <li class="flex items-center pl-4 text-base text-MediumGray font-normal" ><div class="flex justify-center items-center w-10 h-4 " ><img class="" src="./images/icon-reminders.svg" /></div>  Reminders</li>
+              <li class="flex items-center pl-4 text-base text-MediumGray font-normal" ><div class="flex justify-center items-center w-10 h-4 " ><img class="" src="./images/icon-planning.svg"  /></div>  Planning</li>
+            </ul>
+        </li>
+        <li id="companyMenu" class=" xs:relative text-MediumGray text-2xl cursor-pointer w-full xs:w-fit xs:text-right hover:text-AlmostBlack xs:text-base">Company <img class="arrowDown inline" src="./images/icon-arrow-down.svg" /> <img class="arrowUp inline hidden" src="./images/icon-arrow-up.svg" />
+          <ul class="companyDropList hidden h-40 overflow-clip xs:absolute xs:right-0 pl-8 mt-4 w-full md:w-32 rounded-xl bg-white shadow flex flex-col justify-evenly items-start">
+            <li class="text-base">History</li>
+            <li class="text-base">Our Team</li>
+            <li class="text-base">Blog</li>
+          </ul>
+        </li>
+        <li id="Careers" class="text-MediumGray text-2xl cursor-pointer text-right hover:text-AlmostBlack xs:text-base"><a href="https://www.google.com/" target="_blank">Careers</a></li>
+        <li id="About" class="text-MediumGray text-2xl cursor-pointer text-right hover:text-AlmostBlack xs:text-base">About</li>
+      </ul>
+    
+      <div class="mt-12 w-full text-MediumGray flex flex-col justify-between items-center gap-8 xs:flex-row xs:w-auto xs:mt-0">
+        <button id="Login" class="h-auto text-MediumGray text-2xl cursor-pointer text-right hover:text-AlmostBlack xs:text-base">Login</button>
+        <button id="Register" class="h-10 w-48 md:w-24 lg:w-32 border-solid border-2 border-AlmostBlack/100 rounded-xl text-MediumGray text-2xl cursor-pointer hover:text-AlmostBlack xs:text-base" >Register</button>
+      </div>
+    </nav>
+  </div>
+  <div class="xs:gridFitHeight mx-8 mt-8 xs:grid xs:grid-cols-2 xs:grid-rows-1 xs:gap-24 md:mt-10">
+    <div class="xs:h-full lg:w-3/4 xs:place-self-center xs:col-start-2">
+      <img class="w-auto h-auto hidden xs:inline" src="./images/image-hero-desktop.png">
+      <img class="w-full h-auto xs:hidden" src="./images/image-hero-mobile.png">
+    </div>
+
+    <div class="lg:px-12 h-[50vh] w-auto flex flex-col justify-evenly items-center xs:flex-none xs:h-full xs:col-start-1 xs:row-start-1">
+      <p class="mt-2 text-3xl lg:text-7xl font-[700]">Make remote work</p>
+      <p class="text-center px-6 xs:pr-0 xs:text-left xs:text-base">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="h-10 w-36 border-solid font-[500] text-AlmostWhite bg-AlmostBlack border-2 border-AlmostBlack/100 rounded-xl cursor-pointer hover:bg-AlmostWhite hover:text-AlmostBlack hover:font-[500]">Learn more</button>
+    
+      <div class="flex justify-between gap-8">
+        <div><img src="./images/client-databiz.svg"   /></div>
+        <div><img src="./images/client-audiophile.svg"/></div>
+        <div><img src="./images/client-meet.svg"      /></div>
+        <div><img src="./images/client-maker.svg"     /></div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class=" attribution">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/zulfidly" target="_blank">fidly</a>.
+  </div>
+</body>
+</html>
