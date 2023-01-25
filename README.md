@@ -17,3 +17,4 @@ npm install -D tailwindcss postcss autoprefixer vite<br>
 npx tailwindcss-cli -i input.css -o output.css <br>
 npx tailwindcss init -p <br>
 npm run dev <br>
+npx tailwindcss -o output.css --minify <br>
